@@ -1,0 +1,33 @@
+{
+    "name": "@afconwave/sdk",
+    "version": "1.0.0",
+    "description": "Official AfconWave Node.js SDK",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "test": "vitest run"
+    },
+    "keywords": [
+        "payments",
+        "fintech",
+        "africa",
+        "afconwave",
+        "sdk"
+    ],
+    "author": "AfconWave Team",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^25.6.0",
+        "tsup": "^8.3.5",
+        "typescript": "^5.6.3",
+        "vitest": "^2.1.4"
+    },
+    "dependencies": {
+        "axios": "^1.7.7"
+    }
+}
