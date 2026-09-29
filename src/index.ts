@@ -102,10 +102,6 @@ export interface WebhookVerificationOptions {
     tolerance?: number;
 }
 
-/**
- * Verifies that an incoming webhook was sent by AfconWave and is not a replay.
- * timingSafeEqual throws if Buffer lengths differ — always compare lengths first.
- */
 export function verifyWebhookSignature(options: WebhookVerificationOptions): boolean {
     const { payload, signature, secret, tolerance = 300 } = options;
     if (!signature || !secret) return false;
@@ -151,8 +147,8 @@ export class AfconWave {
 
     constructor(config: AfconWaveConfig) {
         const defaultBaseUrl = process.env.AFCONWAVE_BASE_URL || (config.sandbox
-            ? 'https://sandbox.api.afconwave.com/v1'
-            : 'https://api.afconwave.com/v1');
+            ? 'https://sandbox.api.afconwave.com/api/v1'
+            : 'https://api.afconwave.com/api/v1');
 
         this.client = axios.create({
             baseURL: config.baseUrl || defaultBaseUrl,
