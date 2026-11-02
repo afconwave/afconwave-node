@@ -1,33 +1,48 @@
 {
-    "name": "@afconwave/sdk",
-    "version": "1.0.0",
-    "description": "Official AfconWave Node.js SDK",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "build": "tsup src/index.ts --format cjs,esm --dts",
-        "test": "vitest run"
-    },
-    "keywords": [
-        "payments",
-        "fintech",
-        "africa",
-        "afconwave",
-        "sdk"
-    ],
-    "author": "AfconWave Team",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/node": "^25.6.0",
-        "tsup": "^8.3.5",
-        "typescript": "^5.6.3",
-        "vitest": "^2.1.4"
-    },
-    "dependencies": {
-        "axios": "^1.7.7"
-    }
+  "name": "@afconwave/sdk",
+  "version": "2.0.0",
+  "description": "Official AfconWave Node.js / TypeScript SDK for API v2 — deposits, withdrawals, wallets, FX, refunds",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "payments",
+    "fintech",
+    "africa",
+    "afconwave",
+    "mobile-money",
+    "sdk",
+    "payouts",
+    "collections"
+  ],
+  "author": "AfconWave Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afconwave/afconwave-node.git"
+  },
+  "homepage": "https://github.com/afconwave/afconwave-node",
+  "bugs": {
+    "url": "https://github.com/afconwave/afconwave-node/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
 }
